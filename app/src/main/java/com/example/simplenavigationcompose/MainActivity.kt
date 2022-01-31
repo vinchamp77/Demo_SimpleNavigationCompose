@@ -1,4 +1,4 @@
-package com.example.emptycomposeapp
+package com.example.simplenavigationcompose
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.emptycomposeapp.ui.theme.EmptyComposeAppTheme
+import com.example.simplenavigationcompose.ui.theme.EmptyComposeAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
