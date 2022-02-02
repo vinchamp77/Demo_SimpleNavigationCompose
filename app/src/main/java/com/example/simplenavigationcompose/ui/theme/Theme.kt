@@ -29,8 +29,9 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun EmptyComposeAppTheme(
+fun SimpleNavComposeAppTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
+    useSystemUiController: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
@@ -39,10 +40,12 @@ fun EmptyComposeAppTheme(
         LightColorPalette
     }
 
-    val systemUiController = rememberSystemUiController()
-    systemUiController.setStatusBarColor(
-        color = colors.primaryVariant
-    )
+    if (useSystemUiController) {
+        val systemUiController = rememberSystemUiController()
+        systemUiController.setStatusBarColor(
+            color = colors.primaryVariant
+        )
+    }
 
     MaterialTheme(
         colors = colors,
