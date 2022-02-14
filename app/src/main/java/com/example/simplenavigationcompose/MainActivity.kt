@@ -5,10 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
+import com.example.simplenavigationcompose.navigation.BottomBarNavigation
 import com.example.simplenavigationcompose.navigation.BuildNavGraph
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 
@@ -31,5 +33,10 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun MainApp() {
     val navController = rememberNavController()
-    BuildNavGraph(navController)
+
+    Scaffold(
+        bottomBar = { BottomBarNavigation(navController = navController) }
+    ) {
+        BuildNavGraph(navController)
+    }
 }
