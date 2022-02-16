@@ -10,7 +10,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.example.simplenavigationcompose.navigation.BottomBarNavigation
+import com.example.simplenavigationcompose.navigation.BottomBarNav
 import com.example.simplenavigationcompose.navigation.BuildNavGraph
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 
@@ -35,7 +35,7 @@ private fun MainApp() {
     val navController = rememberNavController()
 
     Scaffold(
-        bottomBar = { BottomBarNavigation(navController = navController) }
+        bottomBar = { BottomBarNav(navController = navController) }
     ) {
         BuildNavGraph(navController)
     }
