@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MainApp()
+                    MainScreen()
                 }
             }
         }
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-private fun MainApp() {
+private fun MainScreen() {
     val navController = rememberNavController()
 
     Scaffold(
