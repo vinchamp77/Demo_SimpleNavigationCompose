@@ -16,20 +16,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SimpleNavComposeAppTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    MainScreen()
-                }
-            }
+            MainScreen()
         }
     }
 }
 
 @Composable
 private fun MainScreen() {
-    val navController = rememberNavController()
-    BuildNavGraph(navController)
+    SimpleNavComposeAppTheme {
+        val navController = rememberNavController()
+        BuildNavGraph(navController)
+    }
 }
