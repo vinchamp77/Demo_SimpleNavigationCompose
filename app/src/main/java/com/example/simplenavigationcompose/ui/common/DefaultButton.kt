@@ -1,4 +1,4 @@
-package com.example.simplenavigationcompose.screens
+package com.example.simplenavigationcompose.ui.screens
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height

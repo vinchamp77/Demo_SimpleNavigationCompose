@@ -1,4 +1,4 @@
-package com.example.simplenavigationcompose.navigation
+package com.example.simplenavigationcompose.ui.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -10,6 +10,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.example.simplenavigationcompose.R
+import com.example.simplenavigationcompose.ui.navigation.NavRoute
 
 @Composable
 fun BottomBarNav(navController: NavController) {

@@ -1,4 +1,4 @@
-package com.example.simplenavigationcompose.navigation
+package com.example.simplenavigationcompose.ui.navigation
 
 sealed class NavRoute(val path: String) {
 
