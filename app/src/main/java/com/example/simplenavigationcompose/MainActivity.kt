@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
-import com.example.simplenavigationcompose.navigation.BuildNavGraph
+import com.example.simplenavigationcompose.ui.navigation.BuildNavGraph
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 
 class MainActivity : ComponentActivity() {

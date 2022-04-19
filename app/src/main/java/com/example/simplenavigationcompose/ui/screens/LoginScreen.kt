@@ -1,6 +1,8 @@
-package com.example.simplenavigationcompose.screens
+package com.example.simplenavigationcompose.ui.screens
 
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
@@ -8,33 +10,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 
 @Composable
-fun ProfileScreen(
-    id: Int,
-    showDetails: Boolean,
-    popBackStack: () -> Unit,
-    popUpToLogin: () -> Unit
+fun LoginScreen(
+    navigateToHome: () -> Unit
 ) {
     Column (
         modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally) {
-        Text("Profile Id: $id", fontSize = 40.sp)
-
-        Spacer(modifier = Modifier.height(5.dp))
-        Text("Details: $showDetails", fontSize = 40.sp)
+        Text("Login Screen", fontSize = 40.sp)
 
         DefaultButton(
-            text = "Back",
-            onClick = popBackStack
-        )
-
-        DefaultButton(
-            text = "Log Out",
-            onClick = popUpToLogin
+            text = "Log In",
+            onClick = navigateToHome
         )
     }
 }
@@ -47,11 +37,8 @@ private fun DefaultPreview() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            ProfileScreen(
-                id = 7,
-                showDetails = true,
-                popBackStack = {},
-                popUpToLogin = {}
+            LoginScreen(
+                navigateToHome = {}
             )
         }
     }
