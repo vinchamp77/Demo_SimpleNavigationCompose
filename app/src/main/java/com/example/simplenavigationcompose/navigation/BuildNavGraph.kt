@@ -80,7 +80,6 @@ private fun addProfileScreen(
             ,
             navArgument(NavRoute.Profile.showDetails) {
                 type = NavType.BoolType
-                defaultValue = false
             }
         )
     ) { navBackStackEntry ->
