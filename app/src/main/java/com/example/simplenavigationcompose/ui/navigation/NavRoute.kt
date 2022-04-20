@@ -15,6 +15,7 @@ sealed class NavRoute(val path: String) {
         val query = "query"
     }
 
+    // build navigation path (for screen navigation)
     fun withArgs(vararg args: String): String {
         return buildString {
             append(path)
@@ -24,6 +25,7 @@ sealed class NavRoute(val path: String) {
         }
     }
 
+    // build and setup route format (in navigation graph)
     fun withArgsFormat(vararg args: String) : String {
         return buildString {
             append(path)
