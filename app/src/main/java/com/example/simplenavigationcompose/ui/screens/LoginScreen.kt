@@ -11,11 +11,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
+import com.example.simplenavigationcompose.ui.screens.destinations.HomeScreenDestination
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.annotation.RootNavGraph
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@RootNavGraph(start = true)
+@Destination
 @Composable
 fun LoginScreen(
-    navigateToHome: () -> Unit
+    navigator: DestinationsNavigator?
 ) {
     Column (
         modifier = Modifier.fillMaxWidth(),
@@ -24,7 +30,9 @@ fun LoginScreen(
 
         DefaultButton(
             text = "Log In",
-            onClick = navigateToHome
+            onClick = {
+                navigator?.navigate(HomeScreenDestination)
+            },
         )
     }
 }
@@ -37,9 +45,7 @@ private fun DefaultPreview() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            LoginScreen(
-                navigateToHome = {}
-            )
+            LoginScreen(navigator = null)
         }
     }
 }

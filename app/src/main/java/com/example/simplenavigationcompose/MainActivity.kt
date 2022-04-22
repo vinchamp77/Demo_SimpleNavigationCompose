@@ -5,8 +5,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
-import com.example.simplenavigationcompose.ui.navigation.BuildNavGraph
+import com.example.simplenavigationcompose.ui.screens.NavGraphs
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
+import com.ramcosta.composedestinations.DestinationsNavHost
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun MainScreen() {
     SimpleNavComposeAppTheme {
-        val navController = rememberNavController()
-        BuildNavGraph(navController)
+        DestinationsNavHost(navGraph = NavGraphs.root)
     }
 }

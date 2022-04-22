@@ -10,14 +10,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.simplenavigationcompose.ui.screens.destinations.LoginScreenDestination
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
+import com.ramcosta.composedestinations.annotation.Destination
+import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 
+@Destination
 @Composable
 fun ProfileScreen(
+    navigator: DestinationsNavigator?,
     id: Int,
     showDetails: Boolean,
-    popBackStack: () -> Unit,
-    popUpToLogin: () -> Unit
 ) {
     Column (
         modifier = Modifier.fillMaxWidth(),
@@ -29,12 +32,18 @@ fun ProfileScreen(
 
         DefaultButton(
             text = "Back",
-            onClick = popBackStack
+            onClick = {
+                navigator?.popBackStack()
+            },
         )
 
         DefaultButton(
             text = "Log Out",
-            onClick = popUpToLogin
+            onClick = {
+                navigator?.navigate(LoginScreenDestination) {
+                    popUpTo(LoginScreenDestination.route) {inclusive = true}
+                }
+            },
         )
     }
 }
@@ -48,10 +57,9 @@ private fun DefaultPreview() {
             color = MaterialTheme.colors.background
         ) {
             ProfileScreen(
+                navigator = null,
                 id = 7,
                 showDetails = true,
-                popBackStack = {},
-                popUpToLogin = {}
             )
         }
     }
