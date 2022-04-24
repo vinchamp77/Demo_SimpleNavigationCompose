@@ -14,11 +14,12 @@ import com.example.simplenavigationcompose.ui.screens.destinations.LoginScreenDe
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.navigation.EmptyDestinationsNavigator
 
 @Destination
 @Composable
 fun SearchScreen(
-    navigator: DestinationsNavigator?,
+    navigator: DestinationsNavigator,
     query: String?,
 ) {
     Column (
@@ -32,14 +33,14 @@ fun SearchScreen(
         DefaultButton(
             text = "Back",
             onClick = {
-                navigator?.popBackStack()
+                navigator.popBackStack()
             },
         )
 
         DefaultButton(
             text = "Log Out",
             onClick = {
-                navigator?.navigate(LoginScreenDestination) {
+                navigator.navigate(LoginScreenDestination) {
                     popUpTo(LoginScreenDestination.route) {inclusive = true}
                 }
             },
@@ -56,7 +57,7 @@ private fun DefaultPreview() {
             color = MaterialTheme.colors.background
         ) {
             SearchScreen(
-                navigator = null,
+                navigator = EmptyDestinationsNavigator,
                 query = "liang moi",
             )
         }

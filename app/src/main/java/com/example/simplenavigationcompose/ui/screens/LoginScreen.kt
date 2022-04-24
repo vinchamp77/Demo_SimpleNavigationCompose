@@ -16,12 +16,13 @@ import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.annotation.RootNavGraph
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.navigation.EmptyDestinationsNavigator
 
 @RootNavGraph(start = true)
 @Destination
 @Composable
 fun LoginScreen(
-    navigator: DestinationsNavigator?
+    navigator: DestinationsNavigator
 ) {
     Column (
         modifier = Modifier.fillMaxWidth(),
@@ -31,7 +32,7 @@ fun LoginScreen(
         DefaultButton(
             text = "Log In",
             onClick = {
-                navigator?.navigate(HomeScreenDestination)
+                navigator.navigate(HomeScreenDestination)
             },
         )
     }
@@ -45,7 +46,7 @@ private fun DefaultPreview() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            LoginScreen(navigator = null)
+            LoginScreen(navigator = EmptyDestinationsNavigator)
         }
     }
 }

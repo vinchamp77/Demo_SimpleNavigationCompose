@@ -17,11 +17,12 @@ import com.example.simplenavigationcompose.ui.screens.destinations.SearchScreenD
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
+import com.ramcosta.composedestinations.navigation.EmptyDestinationsNavigator
 
 @Destination
 @Composable
 fun HomeScreen(
-    navigator: DestinationsNavigator?
+    navigator: DestinationsNavigator
 ) {
     Column (
         modifier = Modifier.fillMaxWidth(),
@@ -31,28 +32,28 @@ fun HomeScreen(
         DefaultButton(
             text = "Profile",
             onClick = {
-                navigator?.navigate(ProfileScreenDestination(7, true))
+                navigator.navigate(ProfileScreenDestination(7, true))
             },
         )
 
         DefaultButton(
             text = "Search",
             onClick = {
-               navigator?.navigate(SearchScreenDestination("liang moi"))
+               navigator.navigate(SearchScreenDestination("liang moi"))
             },
         )
 
         DefaultButton(
             text = "Back",
             onClick = {
-                navigator?.popBackStack()
+                navigator.popBackStack()
             },
         )
 
         DefaultButton(
             text = "Log Out",
             onClick = {
-               navigator?.navigate(LoginScreenDestination) {
+               navigator.navigate(LoginScreenDestination) {
                    popUpTo(LoginScreenDestination.route) {inclusive = true}
                }
             },
@@ -68,7 +69,7 @@ private fun DefaultPreview() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colors.background
         ) {
-            HomeScreen(navigator = null)
+            HomeScreen(navigator = EmptyDestinationsNavigator)
        }
     }
 }
