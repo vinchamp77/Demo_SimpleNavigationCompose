@@ -62,9 +62,7 @@ private fun addHomeScreen(
 }
 
 private fun popUpToLogin(navController: NavHostController) {
-    navController.navigate(NavRoute.Login.path) {
-        popUpTo(NavRoute.Login.path) {inclusive = true}
-    }
+    navController.popBackStack(NavRoute.Login.path, inclusive = false)
 }
 
 private fun addProfileScreen(
