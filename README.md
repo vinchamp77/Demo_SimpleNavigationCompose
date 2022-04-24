@@ -5,8 +5,9 @@
 - Android Studio Bumblebee or later
 
 ## Articles
-- [Simple Jetpack Compose Navigation Example - Not Yet Published]()
-- [How to Add Bottom Navigation in Jetpack Compose? - Not Yet Published]()
+- [Simple Jetpack Compose Navigation Example](https://vtsen.hashnode.dev/simple-jetpack-compose-navigation-example)
+- Compose Destinations - Navigation Library
+- How to Add Bottom Navigation in Jetpack Compose?
 
 ## Branches
 - [master](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/master) - Basic Compose Navigation
