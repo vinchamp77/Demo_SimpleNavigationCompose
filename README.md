@@ -6,7 +6,7 @@
 
 ## Articles
 - [Simple Jetpack Compose Navigation Example](https://vtsen.hashnode.dev/simple-jetpack-compose-navigation-example)
-- Compose Destinations - Navigation Library
+- [Compose Destinations - Navigation Library](https://vtsen.hashnode.dev/compose-destinations-navigation-library)
 - How to Add Bottom Navigation in Jetpack Compose?
 
 ## Branches
