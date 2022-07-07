@@ -7,7 +7,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.rememberNavController
 import com.example.simplenavigationcompose.ui.navigation.BottomBarNav
-import com.example.simplenavigationcompose.ui.navigation.BuildNavGraph
+import com.example.simplenavigationcompose.ui.navigation.NavGraph
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -28,7 +28,7 @@ private fun MainScreen() {
         Scaffold(
             bottomBar = { BottomBarNav(navController = navController) }
         ) {
-            BuildNavGraph(navController)
+            NavGraph(navController)
         }
     }
 }

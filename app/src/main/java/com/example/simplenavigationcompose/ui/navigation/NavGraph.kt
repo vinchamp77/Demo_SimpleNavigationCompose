@@ -13,7 +13,7 @@ import com.example.simplenavigationcompose.ui.screens.ProfileScreen
 import com.example.simplenavigationcompose.ui.screens.SearchScreen
 
 @Composable
-fun BuildNavGraph(navController: NavHostController) {
+fun NavGraph(navController: NavHostController) {
 
     NavHost(
         navController = navController,
