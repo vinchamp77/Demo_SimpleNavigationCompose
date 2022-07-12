@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.google.devtools.ksp' version '1.6.10-1.0.2'
+    id 'com.google.devtools.ksp' version '1.7.10-1.0.6'
 }
 
 android {
@@ -69,6 +69,7 @@ dependencies {
 
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
-    implementation 'io.github.raamcosta.compose-destinations:core:1.5.1-beta'
-    ksp 'io.github.raamcosta.compose-destinations:ksp:1.5.1-beta'
+    def compose_destinations_version = '1.6.13-beta'
+    implementation "io.github.raamcosta.compose-destinations:core:$compose_destinations_version"
+    ksp "io.github.raamcosta.compose-destinations:ksp:1.6.13-beta"
 }
