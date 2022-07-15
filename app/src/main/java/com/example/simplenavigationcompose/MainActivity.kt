@@ -9,9 +9,7 @@ import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.navigation.compose.rememberNavController
-import com.example.simplenavigationcompose.ui.navigation.BottomBarNav
-import com.example.simplenavigationcompose.ui.navigation.NavGraph
-import com.example.simplenavigationcompose.ui.navigation.TopBar
+import com.example.simplenavigationcompose.ui.navigation.*
 import com.example.simplenavigationcompose.ui.theme.SimpleNavComposeAppTheme
 import kotlinx.coroutines.launch
 
@@ -34,6 +32,7 @@ private fun MainScreen() {
         val scope =  rememberCoroutineScope()
 
         Scaffold(
+            scaffoldState = scaffoldState,
             topBar = { TopBar(
                 navController =navController,
                 onNavigationIconClick = {
@@ -43,6 +42,14 @@ private fun MainScreen() {
                 }
             ) },
             bottomBar = { BottomBarNav(navController = navController) },
+            drawerContent = {
+                DrawerHeader()
+                DrawerBody(navController = navController, closeNavDrawer = {
+                    scope.launch {
+                        scaffoldState.drawerState.close()
+                    }
+                })
+            }
         ) {
             NavGraph(navController)
         }
