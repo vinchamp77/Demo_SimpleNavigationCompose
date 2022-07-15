@@ -1,5 +1,5 @@
 # Simple Jetpack Compose Navigation Example
-![](screenshots/Simple_Jetpack_Compose_Navigation_Example_01.gif)
+![](screenshots/How_to_Add_Navigation_Drawer_in_Jetpack_Compose_03.gif)
 
 ## Requirements
 - Android Studio Bumblebee or later
