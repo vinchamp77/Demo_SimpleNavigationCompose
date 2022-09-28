@@ -1,6 +1,7 @@
 package com.example.simplenavigationcompose.ui.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -13,9 +14,10 @@ import com.example.simplenavigationcompose.ui.screens.ProfileScreen
 import com.example.simplenavigationcompose.ui.screens.SearchScreen
 
 @Composable
-fun NavGraph(navController: NavHostController) {
+fun NavGraph(modifier: Modifier = Modifier, navController: NavHostController) {
 
     NavHost(
+        modifier = modifier,
         navController = navController,
         startDestination = NavRoute.Login.path
     ) {

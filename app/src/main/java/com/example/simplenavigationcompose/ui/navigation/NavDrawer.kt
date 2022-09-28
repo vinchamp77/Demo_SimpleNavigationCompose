@@ -4,15 +4,17 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.simplenavigationcompose.R
 
 @Composable
 fun DrawerHeader(){
@@ -31,7 +33,7 @@ fun DrawerHeader(){
 fun DrawerBody(navController: NavHostController?, closeNavDrawer: () -> Unit) {
     Column {
         DrawerMenuItem(
-            iconDrawableId = R.drawable.ic_home,
+            imageVector = Icons.Default.Home,
             text = NavRoute.Home.path,
             onItemClick = {
                 navController?.navigate(NavRoute.Home.path)
@@ -39,7 +41,7 @@ fun DrawerBody(navController: NavHostController?, closeNavDrawer: () -> Unit) {
             }
         )
         DrawerMenuItem(
-            iconDrawableId = R.drawable.ic_search,
+            imageVector = Icons.Default.Search,
             text = NavRoute.Search.path,
             onItemClick = {
                 navController?.navigate(NavRoute.Search.withArgs("liang moi"))
@@ -51,7 +53,7 @@ fun DrawerBody(navController: NavHostController?, closeNavDrawer: () -> Unit) {
 
 @Composable
 private fun DrawerMenuItem(
-    iconDrawableId: Int,
+    imageVector: ImageVector,
     text: String,
     onItemClick: () -> Unit){
     Row(
@@ -62,7 +64,7 @@ private fun DrawerMenuItem(
         verticalAlignment = Alignment.CenterVertically,
     ){
         Icon(
-            painter = painterResource(iconDrawableId),
+            imageVector = imageVector,
             contentDescription = null,
         )
         Spacer(modifier = Modifier.width(16.dp))
