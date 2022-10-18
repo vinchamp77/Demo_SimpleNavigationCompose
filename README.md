@@ -13,5 +13,5 @@
 ## Branches
 - [master](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/master) - Basic Compose Navigation
 - [compose_destinations](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/compose_destinations) -  Basic Compose Navigation (Using [Compose Destinations](https://github.com/raamcosta/compose-destinations/) library)
-- [bottom_nav](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/bottom_nav) - Added Bottom Navigation
-- [bottom_nav_drawer](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/bottom_nav_drawer) - Added Navigation Drawer
+- [bottom_nav](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/bottom_nav) - Bottom Navigation
+- [bottom_nav_drawer](https://github.com/vinchamp77/Demo_SimpleNavigationCompose/tree/bottom_nav_drawer) - Bottom Navigation + Navigation Drawer
