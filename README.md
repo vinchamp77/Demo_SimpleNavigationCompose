@@ -2,7 +2,7 @@
 ![](screenshots/Simple_Jetpack_Compose_Navigation_Example_01.gif)
 
 ## Requirements
-- Android Studio Bumblebee or later
+- Android Studio Flamingo or later
 
 ## Tech Stack
 - Jetpack Compose
