@@ -2,7 +2,7 @@
 ![](screenshots/How_to_Add_Navigation_Drawer_in_Jetpack_Compose_03.gif)
 
 ## Requirements
-- Android Studio Bumblebee or later
+- Android Studio Flamingo or later
 
 ## Tech Stack
 - Jetpack Compose
