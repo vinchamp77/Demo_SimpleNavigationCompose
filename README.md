@@ -4,6 +4,11 @@
 ## Requirements
 - Android Studio Bumblebee or later
 
+## Tech Stack
+- Jetpack Compose
+- Navigation Compose
+- Compose Destination
+
 ## Articles
 - [Simple Jetpack Compose Navigation Example](https://vtsen.hashnode.dev/simple-jetpack-compose-navigation-example)
 - [Compose Destinations - Navigation Library](https://vtsen.hashnode.dev/compose-destinations-navigation-library)
